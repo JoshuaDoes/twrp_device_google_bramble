@@ -63,6 +63,7 @@ on property:twrp.apex.loaded=true
 on property:sys.usb.config=fastboot
    start servicemanager
    start hwservicemanager
+   start boot-hal-1-1
    restart fastbootd
  
 on property:prep.decrypt=1
