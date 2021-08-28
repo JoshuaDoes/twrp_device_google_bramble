@@ -64,6 +64,7 @@ on property:sys.usb.config=fastboot
    start servicemanager
    start hwservicemanager
    start boot-hal-1-1
+   start health-hal-2-1
    restart fastbootd
  
 on property:prep.decrypt=1
