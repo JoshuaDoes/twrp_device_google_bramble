@@ -37,7 +37,6 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
-    install_keyring
 
 on init
     # Don't lose recovery logs- keep warm reset for coming out of recovery.
@@ -45,6 +44,9 @@ on init
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
     start touchdriver
+
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring
 
 on property:crypto.ready=0
     stop qseecomd
