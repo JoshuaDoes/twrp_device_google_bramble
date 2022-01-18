@@ -200,4 +200,5 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=10
 
 #TWRP
 PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/bramble/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+    $(OUT_DIR)/target/product/bramble/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so \
+    $(OUT_DIR)/target/product/bramble/obj/SHARED_LIBRARIES/libion_intermediates/libion.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libion.so
